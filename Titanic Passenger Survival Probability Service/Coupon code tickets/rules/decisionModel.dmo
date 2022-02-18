@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>909fffce-4cc9-47a1-b390-9df2c0bf4759</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Coupon Code">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="CouponCode" collection="false" name="Coupon Code"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Coupon Code" typeRef="CouponCode"/>
+    </inputData>
+    <decision id="node_1" name="Final Ticket Price">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="CouponCode" collection="false" name="Coupon Code"/>
+                <input bomType="Ticket" collection="false" name="Ticket"/>
+                <output bomType="Ticket" collection="false" name="Final Ticket Price"/>
+                <rule defaultRule="false" href="node_1/Calculate%20ticket%20price.dmt" kind="DecisionTable" name="Calculate ticket price"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Final Ticket Price" typeRef="Ticket"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Ticket">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Ticket" collection="false" name="Ticket"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Ticket" typeRef="Ticket"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

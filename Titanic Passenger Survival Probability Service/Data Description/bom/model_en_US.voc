@@ -1,0 +1,32 @@
+
+# CouponCode
+CouponCode#concept.label = Coupon Code
+CouponCode.blackFriday#instance.label = BlackFriday
+CouponCode.cyberMonday#instance.label = CyberMonday
+
+# Passenger
+Passenger#concept.label = Passenger
+Passenger.Passenger(java.lang.Long,CouponCode,java.lang.String,java.lang.String,java.lang.String)#phrase.navigation = a new {Passenger} where {0, age} {1, coupon code} {2, first name} {3, gender} {4, last name}
+Passenger.age#phrase.action = set the age of {this} to {age}
+Passenger.age#phrase.addition_setter = add {age} to the age of {this}
+Passenger.age#phrase.navigation = {age} of {this}
+Passenger.age#phrase.subtraction_setter = subtract {age} from the age of {this}
+Passenger.couponCode#phrase.action = set the coupon code of {this} to {coupon code}
+Passenger.couponCode#phrase.clearer = clear the coupon code of {this}
+Passenger.couponCode#phrase.navigation = {coupon code} of {this}
+Passenger.firstName#phrase.action = set the first name of {this} to {first name}
+Passenger.firstName#phrase.navigation = {first name} of {this}
+Passenger.gender#phrase.action = set the gender of {this} to {gender}
+Passenger.gender#phrase.navigation = {gender} of {this}
+Passenger.lastName#phrase.action = set the last name of {this} to {last name}
+Passenger.lastName#phrase.navigation = {last name} of {this}
+
+# Ticket
+Ticket#concept.label = Ticket
+Ticket.Ticket(java.lang.String,java.lang.Long)#phrase.navigation = a new {Ticket} where {0, Coupon Value} {1, price}
+Ticket.couponValue#phrase.action = set the Coupon Value of {this} to {Coupon Value}
+Ticket.couponValue#phrase.navigation = {Coupon Value} of {this}
+Ticket.price#phrase.action = set the price of {this} to {price}
+Ticket.price#phrase.addition_setter = add {price} to the price of {this}
+Ticket.price#phrase.navigation = {price} of {this}
+Ticket.price#phrase.subtraction_setter = subtract {price} from the price of {this}

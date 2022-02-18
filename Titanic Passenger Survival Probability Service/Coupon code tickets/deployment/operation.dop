@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Coupon code tickets">
+  <name>Coupon-code-tickets</name>
+  <uuid>a631badd-e1df-4ed6-8f63-78dbcfbf5586</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#909fffce-4cc9-47a1-b390-9df2c0bf4759"/>
+  <targetRuleProject href="../../Coupon%20code%20tickets#9c051dc7-83c6-44e9-8b3a-efb9c81c688c"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

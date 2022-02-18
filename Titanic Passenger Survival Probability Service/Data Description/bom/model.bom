@@ -1,0 +1,73 @@
+
+
+public class CouponCode
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "CouponCode"
+        property "de.generated" "true"
+{
+    domain {static blackFriday, static cyberMonday}
+    public static final readonly CouponCode blackFriday
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "BlackFriday";
+    public static final readonly CouponCode cyberMonday
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CyberMonday";
+}
+
+public class Passenger
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Passenger"
+        property "de.generated" "true"
+{
+    public java.lang.Long age
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public CouponCode couponCode
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "couponCode"
+                property update "true";
+    public string firstName
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "firstName"
+                property update "true";
+    public string gender
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "gender"
+                property update "true";
+    public string lastName
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "lastName"
+                property update "true";
+    public Passenger(java.lang.Long age, CouponCode couponCode, string firstName, string gender, string lastName)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Passenger()
+                property "dataio.default" "true";
+}
+
+public class Ticket
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Ticket"
+        property "de.generated" "true"
+{
+    public string couponValue
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CouponValue"
+                property update "true";
+    public java.lang.Long price
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "price"
+                property update "true";
+    public Ticket(string couponValue, java.lang.Long price)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Ticket()
+                property "dataio.default" "true";
+}
+
